@@ -1,0 +1,12 @@
+cat:
+  name: "小黑"
+  age: 3
+  gender: "母"
+  color: "黑"
+  hair: "短毛"
+dog:
+  name: "小白"
+  age: 3
+  gender: "母"
+  color: "白"
+  hair: "长毛"
