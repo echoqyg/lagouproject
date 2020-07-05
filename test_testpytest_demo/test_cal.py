@@ -5,8 +5,6 @@
 import pytest
 import yaml
 
-from cal import Calculator
-
 
 class Test_cal:
 

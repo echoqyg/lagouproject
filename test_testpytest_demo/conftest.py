@@ -2,7 +2,7 @@
 # encoding: utf-8
 import pytest
 
-from cal import Calculator
+from test_testpytest_demo.cal import Calculator
 
 
 @pytest.fixture()
