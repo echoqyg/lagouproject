@@ -7,6 +7,7 @@ import yaml
 from appium import webdriver
 from appium.webdriver import WebElement
 from appium.webdriver.common.mobileby import MobileBy
+from selenium.webdriver.support.wait import WebDriverWait
 
 
 class TestWechatWork:
@@ -79,10 +80,11 @@ class TestWechatWork:
             'new UiScrollable(new UiSelector().scrollable(true).instance(0)).'
             'scrollIntoView(new UiSelector().text("删除成员").instance(0));').click()
         self.driver.find_element(MobileBy.XPATH, "//*[@text='确定']").click()
+        WebDriverWait(self.driver, 30).until_not(lambda x: x.find_element_by_xpath("//*[@text='%s']" % name))
         name_elements: list[WebElement] = self.driver.find_elements_by_xpath(
             "//*[@text='添加成员']/../../../../../..//*[@text!='']")
         names = []
         [names.append(name_element.text) for name_element in name_elements]
-        print(names)
-        print(name)
+        sleep(2)
+        self.driver.find_element_by_xpath("//*[@text='消息']").click()
         assert name not in names
