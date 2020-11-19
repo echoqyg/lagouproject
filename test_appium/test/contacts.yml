@@ -1,0 +1,6 @@
+- name: "钱1"
+  gender: "女"
+  iphone: 13611111111
+- name: "钱2"
+  gender: "男"
+  iphone: 13711112222
