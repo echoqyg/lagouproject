@@ -17,8 +17,8 @@ class TestWeworkAccess:
 
     def test_get_token(self):
         params = {
-            "corpid": "wwaabe2ad82255f238",
-            "corpsecret": "gRI4K5pjUX2R34YSKeK2CkMcvtluBO3OUQlWQaNPfNk"
+            "corpid": "",
+            "corpsecret": ""
         }
         res = requests.get(f"https://qyapi.weixin.qq.com/cgi-bin/gettoken", params=params)
         try:
