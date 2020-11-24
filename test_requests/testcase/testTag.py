@@ -15,7 +15,7 @@ class TestTag:
         self.tag = TagApi()
 
     def create_muti_data(self):
-        data = [("yuuu123yu" + str(x), str(x)) for x in range(1, 4)]
+        data = [("yuuu123yu" + str(x), str(x)) for x in range(1, 20)]
         return data
 
     @pytest.mark.parametrize("tagname,tagid", create_muti_data("xx"))
